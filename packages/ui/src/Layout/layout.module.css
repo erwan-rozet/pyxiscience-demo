@@ -1,0 +1,23 @@
+/* layout.module.css */
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100vh;
+  grid-template-areas: 'sidebar main';
+}
+
+.sidebar {
+  grid-area: sidebar;
+  /* background-color: #f4f4f4; */
+  border-right: 1px solid #ddd;
+  border: 1px solid #ddd;
+  margin: 1rem 0rem 1rem 1rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.main {
+  grid-area: main;
+  padding: 2rem;
+  overflow-y: auto;
+}
