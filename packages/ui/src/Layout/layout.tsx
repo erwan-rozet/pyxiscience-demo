@@ -1,3 +1,5 @@
+'use client';
+
 import Sidebar from '../SideBar/SideBar';
 import styles from './layout.module.css';
 

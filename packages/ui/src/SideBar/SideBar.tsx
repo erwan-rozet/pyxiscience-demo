@@ -3,33 +3,117 @@
 import Image from 'next/image';
 import styles from './SideBar.module.css';
 import Link from 'next/link';
+import { SquaresFourIcon } from '@phosphor-icons/react/dist/icons/SquaresFour';
+import { UserListIcon } from '@phosphor-icons/react/dist/icons/UserList';
+import { BookOpenTextIcon } from '@phosphor-icons/react/dist/icons/BookOpenText';
+import { UserCircleCheckIcon } from '@phosphor-icons/react/dist/icons/UserCircleCheck';
+import { TrendUpIcon } from '@phosphor-icons/react/dist/icons/TrendUp';
+import { TrophyIcon } from '@phosphor-icons/react/dist/icons/Trophy';
+import { NotePencilIcon } from '@phosphor-icons/react/dist/icons/NotePencil';
+import { ExamIcon } from '@phosphor-icons/react/dist/icons/Exam';
+import { SignOutIcon } from '@phosphor-icons/react/dist/icons/SignOut';
+import { BroadcastIcon } from '@phosphor-icons/react/dist/icons/Broadcast';
+import { UserGearIcon } from '@phosphor-icons/react/dist/icons/UserGear';
+import { UserFocusIcon } from '@phosphor-icons/react/dist/icons/UserFocus';
+
+const user = {
+  initials: 'ER',
+  name: 'Erwan Rozet',
+  email: 'erwan.rozet@pyxiscience.com',
+  title: 'Professeur',
+  studentClass: 'BUT GEA 1ère année promo entière',
+};
 
 export default function Sidebar() {
   return (
-    <>
-      <div className={styles.logo}>
+    <div className={styles.sideBarContainer}>
+      <div id="logo" className={styles.logo}>
         <Image
           src="/logo.png"
           width={100}
           height={100}
           style={{ objectFit: 'contain' }}
           alt="Pyxiscience logo"
-        ></Image>
+          unoptimized
+        />
       </div>
+
+      <div id="user-infos" className={styles.userInfosContainer}>
+        <div id="user-picture" className={styles.userPicture}>
+          <Image
+            src="/avatar.png"
+            width={64}
+            height={64}
+            alt="User picture"
+            className={styles.avatar}
+            unoptimized
+          />
+        </div>
+        <div id="user-initials" className={styles.userInitials}>
+          {user.initials}
+        </div>
+      </div>
+
+      <div id="user-name-title" className={styles.userName}>
+        <div>{user.name} </div> <div> {user.title}</div>
+      </div>
+      <div id="user-email" className={styles.userEmail}>
+        {user.email}
+      </div>
+
+      <div id="user-initials" className={styles.studentClass}>
+        {user.studentClass}
+      </div>
+
       <nav className={styles.sidebar}>
-        <h2 className={styles.title}>Dashboard</h2>
         <ul className={styles.menu}>
-          <li>
-            <Link href="/">Accueil</Link>
+          <li className={styles.link}>
+            <SquaresFourIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/">Tableau de bord</Link>
           </li>
-          <li>
-            <Link href="/profile">Profil</Link>
+          <li className={styles.link}>
+            <UserListIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/profile">Mes corrections</Link>
           </li>
-          <li>
-            <Link href="/settings">Paramètres</Link>
+          <li className={styles.link}>
+            <BookOpenTextIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/settings">Exercices</Link>
+          </li>
+          <li className={styles.link}>
+            <ExamIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/">Devoirs</Link>
+          </li>
+          <li className={styles.link}>
+            <NotePencilIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/profile">Feuilles TD</Link>
+          </li>
+          <li className={styles.link}>
+            <TrophyIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/settings">Examens</Link>
+          </li>
+          <li className={styles.link}>
+            <TrendUpIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/profile">Progression</Link>
+          </li>
+          <li className={styles.link}>
+            <UserFocusIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/settings">Espace personnel</Link>
+          </li>
+          <li className={styles.link}>
+            <BroadcastIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/settings">Communications et documents</Link>
+          </li>
+          <li className={styles.link}>
+            <UserGearIcon size={20} color={'darkblue'} wheight={'bold'} />
+            <Link href="/settings">Mon profil</Link>
           </li>
         </ul>
       </nav>
-    </>
+
+      <div className={styles.footer}>
+        <SignOutIcon size={20} color={'darkblue'} wheight={'bold'} />
+        <Link href="/settings">Se déconnecter</Link>
+      </div>
+    </div>
   );
 }
