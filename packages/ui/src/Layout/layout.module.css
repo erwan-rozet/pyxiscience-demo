@@ -1,19 +1,25 @@
 /* layout.module.css */
 .layout {
+  height: 100vh; /* pleine hauteur sans débordement */
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 1fr;
   grid-template-areas: 'sidebar main';
+  padding: 1rem; /* remplace les marges internes */
+  box-sizing: border-box;
+  gap: 1rem; /* espace entre sidebar et main */
 }
 
 .sidebar {
   grid-area: sidebar;
-  /* background-color: #f4f4f4; */
-  border-right: 1px solid #ddd;
   border: 1px solid #ddd;
-  margin: 1rem 0rem 1rem 1rem;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 12px;
+  height: 100%; /* OK */
+  overflow: hidden; /* empêche le scroll global sur la page */
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .main {

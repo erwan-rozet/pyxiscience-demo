@@ -1,36 +1,40 @@
-# With-NestJs | Web
+# Projet inspiré de Pyxiscience
 
-## Getting Started
+Ce projet est une reproduction partielle de l'interface de la plateforme Pyxiscience, avec quelques libertés graphiques et fonctionnelles. Il a été développé dans le cadre d’un projet personnel afin de me familiariser avec leur stack technique et approche UX.
 
-> 🏁 This app depends on the [apps/api](../api/README.md) server. make sure your server is running at the port `3000`
+## 🎯 Objectifs
 
-Run the development server:
+- Reproduire une section de la plateforme avec une UX cohérente
+- Explorer les interactions possibles (navigation, cards, etc.)
+- Utiliser les mêmes technologies
 
-```bash
-pnpm run dev
-```
+## ⚙️ Stack utilisée
 
-Open [localhost:3001](http://localhost:3001) with your browser to see the result.
+- **Next.js (React)**
+- **NestJS**
+- **Prisma** (ORM)
+- **GraphQL** (Apollo)
+- **Turborepo** (monorepo)
+- CSS Modules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Fonctionnalités incluses
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, as `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
+- Interface de modules avec cards dynamiques
+- Barre latérale avec liens actifs
+- Composants réutilisables pour formulaire, layout, etc.
+- Système de routing dynamique (Next.js)
+- (Ajoute d'autres points si pertinents)
 
-### ⚠️ Note about build
+## 📷 Aperçu
 
-If you plan to only build this app. Please make sure you've built the packages first.
+![screenshot](./screenshot.png)
 
-## Learn More
+## 🧠 Remarques
 
-To learn more about Next.js, take a look at the following resources:
+- Le projet a été conçu sans accès au code source original.
+- Les choix de design sont basés sur des éléments publics.
+- Objectif : montrer mes compétences techniques et ma capacité à m’adapter.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👉 N’hésitez pas à me contacter si vous souhaitez en discuter !
