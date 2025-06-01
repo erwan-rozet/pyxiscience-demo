@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Pyxiscience - Plateforme d'apprentissage des mathémathiques",
   description: 'La plateforme scientifique nouvelle génération',
   icons: {
-    icon: [{ rel: 'icon', url: '/icon.png' }],
+    icon: [{ rel: 'icon', url: '/icon.png', sizes: '180x180' }],
   },
 };
 

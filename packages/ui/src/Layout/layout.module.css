@@ -13,9 +13,13 @@
 .sidebar {
   grid-area: sidebar;
   border: 1px solid #ddd;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 12px;
-  height: 100%; /* prend toute la hauteur disponible */
+  height: 100%; /* OK */
+  overflow: hidden; /* empêche le scroll global sur la page */
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .main {
