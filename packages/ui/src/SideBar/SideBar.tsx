@@ -15,6 +15,8 @@ import { BroadcastIcon } from '@phosphor-icons/react/dist/icons/Broadcast';
 import { UserGearIcon } from '@phosphor-icons/react/dist/icons/UserGear';
 import { UserFocusIcon } from '@phosphor-icons/react/dist/icons/UserFocus';
 import { CaretDownIcon } from '@phosphor-icons/react/dist/icons/CaretDown';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const user = {
   initials: 'ER',
@@ -24,8 +26,25 @@ const user = {
   subject: 'Mathématiques',
   studentClass: 'BUT GEA 1ère année promo entière',
 };
+const navLinks = [
+  { href: '/dashboard', label: 'Tableau de bord', icon: SquaresFourIcon },
+  { href: '/profile', label: 'Mes corrections', icon: UserListIcon },
+  { href: '/settings', label: 'Exercices', icon: BookOpenTextIcon },
+  { href: '/', label: 'Devoirs', icon: ExamIcon },
+  { href: '/profile', label: 'Feuilles TD', icon: NotePencilIcon },
+  { href: '/settings', label: 'Examens', icon: TrophyIcon },
+  { href: '/profile', label: 'Progression', icon: TrendUpIcon },
+  { href: '/settings', label: 'Espace personnel', icon: UserFocusIcon },
+  {
+    href: '/settings',
+    label: 'Communications et documents',
+    icon: BroadcastIcon,
+  },
+  { href: '/settings', label: 'Mon profil', icon: UserGearIcon },
+];
 
 export default function Sidebar() {
+  const pathname = usePathname();
   return (
     <div className={styles.sideBarContainer}>
       <div id="logo" className={styles.logo}>
@@ -43,7 +62,7 @@ export default function Sidebar() {
         <div id="user-infos" className={styles.userInfosContainer}>
           <div id="user-picture" className={styles.userPicture}>
             <Image
-              src="/avatar.png"
+              src="/portrait-bw-cold.jpg"
               width={64}
               height={64}
               alt="User picture"
@@ -84,46 +103,21 @@ export default function Sidebar() {
       <div className={styles.scrollableContent}>
         <nav className={styles.sidebar}>
           <ul className={styles.menu}>
-            <li className={styles.link}>
-              <SquaresFourIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/dashboard">Tableau de bord</Link>
-            </li>
-            <li className={styles.link}>
-              <UserListIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/profile">Mes corrections</Link>
-            </li>
-            <li className={styles.link}>
-              <BookOpenTextIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/settings">Exercices</Link>
-            </li>
-            <li className={styles.link}>
-              <ExamIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/">Devoirs</Link>
-            </li>
-            <li className={styles.link}>
-              <NotePencilIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/profile">Feuilles TD</Link>
-            </li>
-            <li className={styles.link}>
-              <TrophyIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/settings">Examens</Link>
-            </li>
-            <li className={styles.link}>
-              <TrendUpIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/profile">Progression</Link>
-            </li>
-            <li className={styles.link}>
-              <UserFocusIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/settings">Espace personnel</Link>
-            </li>
-            <li className={styles.link}>
-              <BroadcastIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/settings">Communications et documents</Link>
-            </li>
-            <li className={styles.link}>
-              <UserGearIcon size={20} color={'darkblue'} wheight={'bold'} />
-              <Link href="/settings">Mon profil</Link>
-            </li>
+            {navLinks.map(({ href, label, icon: Icon }) => (
+              <li key={href} className={styles.link}>
+                <Icon
+                  size={20}
+                  color={pathname === href ? 'var(--blue-color)' : 'darkblue'}
+                  weight="bold"
+                />
+                <Link
+                  href={href}
+                  className={pathname === href ? styles.activeLink : ''}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

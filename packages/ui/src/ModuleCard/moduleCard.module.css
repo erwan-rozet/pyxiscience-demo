@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  border: 1px solid var(--blue-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow2);
+  overflow: hidden; /* nécessaire pour que le border-radius masque les enfants */
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.bottom {
+  border-top: 1px solid black;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  margin-right: 25px;
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 40px;
+  border-radius: 200px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.category {
+  margin-left: 25px;
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 40px;
+  border-radius: 200px;
+  border: 1px solid black;
+  background-color: white;
+}

@@ -1,0 +1,11 @@
+.searchBar {
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 275px;
+  height: 40px;
+  border-radius: 200px;
+  border: 2px solid var(--blue-color);
+  box-shadow: var(--shadow2);
+}
