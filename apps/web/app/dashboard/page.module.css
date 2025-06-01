@@ -5,31 +5,34 @@
 
 .modulesWrapper {
   margin-top: 2rem;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  max-width: 1250px;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .title {
+  flex-shrink: 0;
+  font-size: 1.5rem;
   margin-right: auto;
 }
 
-.searchBarWrapper,
-.plusIconWrapper {
+.actionsWrapper {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .cards {
   margin-top: 2rem;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
   gap: 1rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; /* centre horizontalement */
 }
