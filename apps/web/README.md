@@ -27,7 +27,7 @@ Ce projet est une reproduction partielle de l'interface de la plateforme Pyxisci
 
 ## 📷 Aperçu
 
-![screenshot](./screenshot.png)
+![screenshot](./apps/web/public/screenshot.png)
 
 ## 🧠 Remarques
 
