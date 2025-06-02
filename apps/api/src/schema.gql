@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ModuleType {
+  id: ID!
+  title: String!
+  category: String!
+  color: String!
+}
+
+type Query {
+  modules: [ModuleType!]!
+}

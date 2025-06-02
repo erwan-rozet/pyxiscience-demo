@@ -1,59 +1,25 @@
+'use client';
+
 import styles from './page.module.css';
 import { AddModule, ModuleCard, SearchBar } from '@repo/ui';
+import { useQuery } from '@apollo/client';
+import { GET_MODULES } from '../../graphql/queries';
 
-export default async function Profile() {
-  const cardsContent = [
-    // Mathématiques
-    {
-      color: 'var(--blue-color)',
-      title: 'Outils mathématiques de gestion II (R2.07)',
-      category: 'Math.',
-    },
-    {
-      color: 'var(--blue-color)',
-      title: 'Finance (R1.10)',
-      category: 'Math.',
-    },
-    {
-      color: 'var(--blue-color)',
-      title: 'Outils mathématiques de gestion I (R1.08)',
-      category: 'Math.',
-    },
+type ModuleData = {
+  title: string;
+  category: string;
+  color: string;
+};
 
-    // Biologie
-    {
-      color: 'purple',
-      title: 'Biologie cellulaire I (B1.01)',
-      category: 'Bio.',
-    },
-    {
-      color: 'purple',
-      title: 'Génétique et évolution II (B2.03)',
-      category: 'Bio.',
-    },
-    {
-      color: 'purple',
-      title: 'Physiologie animale et végétale I (B1.06)',
-      category: 'Bio.',
-    },
+export default function Profile() {
+  const { data, loading, error } = useQuery(GET_MODULES);
 
-    // Physique
-    {
-      color: 'crimson',
-      title: 'Mécanique du point et du solide I (P1.02)',
-      category: 'Phy.',
-    },
-    {
-      color: 'crimson',
-      title: 'Électromagnétisme et circuits II (P2.05)',
-      category: 'Phy.',
-    },
-    {
-      color: 'crimson',
-      title: "Thermodynamique et transferts d'énergie I (P1.08)",
-      category: 'Phy.',
-    },
-  ];
+  console.log('🔍 data:', data);
+
+  console.log('🔍 data.modules:', data.modules);
+
+  if (loading) return <p>Chargement des modules...</p>;
+  if (error) return <p>Erreur : {error.message}</p>;
 
   return (
     <>
@@ -71,8 +37,8 @@ export default async function Profile() {
         </div>
       </div>
       <div id="cards" className={styles.cards}>
-        {cardsContent &&
-          cardsContent.map((card) => (
+        {data &&
+          data.modules.map((card: ModuleData) => (
             <ModuleCard
               color={card.color}
               title={card.title}
