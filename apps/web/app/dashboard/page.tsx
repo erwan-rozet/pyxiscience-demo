@@ -14,10 +14,6 @@ type ModuleData = {
 export default function Profile() {
   const { data, loading, error } = useQuery(GET_MODULES);
 
-  console.log('🔍 data:', data);
-
-  console.log('🔍 data.modules:', data.modules);
-
   if (loading) return <p>Chargement des modules...</p>;
   if (error) return <p>Erreur : {error.message}</p>;
 

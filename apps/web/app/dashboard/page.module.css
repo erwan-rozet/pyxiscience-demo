@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap; /* par défaut on ne wrap pas */
   gap: 1rem;
 }
 
@@ -27,7 +28,9 @@
   gap: 1rem;
 }
 
-.cards {
+/* commented out to check responsive */
+
+/* .cards {
   margin-top: 2rem;
   max-width: 1250px;
   margin-left: auto;
@@ -35,4 +38,40 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+} */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Media Query pour petits écrans */
+@media (max-width: 820px) {
+  .modulesWrapper {
+    flex-wrap: wrap; /* autorise le retour à la ligne */
+    flex-direction: column; /* on empile verticalement */
+    align-items: flex-start; /* alignement à gauche */
+    gap: 0.75rem;
+  }
+
+  .title {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Pour que la zone des actions prenne toute la largeur */
+  #searchBarWrapper,
+  #plusIconWrapper {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Et si on veux aligner les boutons sur la même ligne sur petits écrans */
+  .actionsWrapper {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
 }

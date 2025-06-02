@@ -96,6 +96,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .avatar {
@@ -138,8 +139,25 @@
   display: flex;
   justify-content: center;
   font-size: 0.75rem;
+  word-break: break-word; /* évite débordement si l’email est long */
+  padding: 0 0.25rem; /* petit padding horizontal pour confort */
 }
 
+/* Sur petits écrans (mobile) : */
+@media (max-width: 480px) {
+  .userEmail {
+    font-size: 0.65rem; /* un peu plus petit */
+    justify-content: flex-start; /* aligné à gauche */
+  }
+}
+
+/* Sur écrans moyens (tablettes) */
+@media (min-width: 481px) and (max-width: 820px) {
+  .userEmail {
+    font-size: 0.7rem;
+    justify-content: center; /* centré */
+  }
+}
 .studentSubject {
   padding-top: 3%;
   padding-bottom: 3%;
