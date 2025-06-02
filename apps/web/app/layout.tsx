@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import './globals.css';
-import { Layout } from '@repo/ui';
+import { ClientProviders } from './client-providers';
 
 const inter = Montserrat({ weight: '400', subsets: ['latin'] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
     <html lang="en">
       {' '}
       <body className={inter.className}>
-        <Layout>{children}</Layout>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
