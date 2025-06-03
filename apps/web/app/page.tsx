@@ -11,3 +11,11 @@ const RootPage = ({}) => {
 };
 
 export default RootPage;
+
+export async function getServerSideProps() {
+  console.log('\n\n🌐 Someone accessed the page!');
+
+  return {
+    props: {},
+  };
+}

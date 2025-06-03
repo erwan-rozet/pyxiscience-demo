@@ -2,8 +2,7 @@
 
 This project is a partial reproduction of the Pyxiscience platform interface, with some graphical and functional liberties. It was developed as a personal project to familiarize myself with their tech stack and UX approach.
 
-> [!WARNING]
-> **_Due to the very short development timeframe, only a few very bascis features are implemented,
+> [!WARNING] > **_Due to the very short development timeframe, only a few very bascis features are implemented,
 > and the GraphQL API is just a learning POC._**
 
 ## Goals
@@ -54,7 +53,29 @@ Install dependencies with `pnpm i`:
 pnpm i
 ```
 
-Serve dev `pnpm dev` :
+# Serve dev `pnpm dev` :
+
+_At the root of the repo :_
+
+```bash
+pnpm dev
+```
+
+_Or if you want separated terminals for each app, from the root of the repo, execute :_
+
+```bash
+cd apps/api
+```
+
+```bash
+pnpm dev
+```
+
+and
+
+```bash
+cd apps/web
+```
 
 ```bash
 pnpm dev

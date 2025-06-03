@@ -15,7 +15,16 @@ export default function Profile() {
   const { data, loading, error } = useQuery(GET_MODULES);
 
   if (loading) return <p>Chargement des modules...</p>;
-  if (error) return <p>Erreur : {error.message}</p>;
+  if (error)
+    return (
+      <>
+        <p>Oups, erreur : {error.message} </p>
+        <p>
+          {' '}
+          Veuillez recharger la page ou vérifier que le serveur api est lancé
+        </p>
+      </>
+    );
 
   return (
     <>
