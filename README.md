@@ -23,6 +23,7 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 - Sidebar with active navigation links
 - Reusable components for forms, layout, etc.
 - Dynamic routing system (Next.js)
+- Basic GraphQL API
 
 ## Preview
 
@@ -55,5 +56,6 @@ Serve dev `pnpm dev` :
 pnpm dev
 ```
 
-[API](http://localhost:3000/graphql)
-[Web](http://localhost:3001/dashboard)
+- [API](http://localhost:3000/graphql)
+
+- [Web](http://localhost:3001/dashboard)

@@ -5,21 +5,26 @@ import { Montserrat } from 'next/font/google';
 import './globals.css';
 import { ClientProviders } from './client-providers';
 
-const inter = Montserrat({ weight: '400', subsets: ['latin'] });
+const font = Montserrat({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Pyxiscience - Plateforme d'apprentissage des mathémathiques",
   description: 'La plateforme scientifique nouvelle génération',
   icons: {
-    icon: [{ rel: 'icon', url: '/icon.png', sizes: '180x180' }],
+    icon: [
+      { rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' },
+      { rel: 'icon', type: 'image/x-icon', url: '/favicon.ico' },
+      { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' },
+    ],
   },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       {' '}
-      <body className={inter.className}>
+      <body className={font.className}>
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

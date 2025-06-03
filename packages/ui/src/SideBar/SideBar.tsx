@@ -15,7 +15,6 @@ import { BroadcastIcon } from '@phosphor-icons/react/dist/icons/Broadcast';
 import { UserGearIcon } from '@phosphor-icons/react/dist/icons/UserGear';
 import { UserFocusIcon } from '@phosphor-icons/react/dist/icons/UserFocus';
 import { CaretDownIcon } from '@phosphor-icons/react/dist/icons/CaretDown';
-import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const user = {
@@ -28,19 +27,19 @@ const user = {
 };
 const navLinks = [
   { href: '/dashboard', label: 'Tableau de bord', icon: SquaresFourIcon },
-  { href: '/profile', label: 'Mes corrections', icon: UserListIcon },
-  { href: '/settings', label: 'Exercices', icon: BookOpenTextIcon },
-  { href: '/', label: 'Devoirs', icon: ExamIcon },
-  { href: '/profile', label: 'Feuilles TD', icon: NotePencilIcon },
-  { href: '/settings', label: 'Examens', icon: TrophyIcon },
-  { href: '/profile', label: 'Progression', icon: TrendUpIcon },
-  { href: '/settings', label: 'Espace personnel', icon: UserFocusIcon },
+  { href: '/corrections', label: 'Mes corrections', icon: UserListIcon },
+  { href: '/exercices', label: 'Exercices', icon: BookOpenTextIcon },
+  { href: '/homework', label: 'Devoirs', icon: ExamIcon },
+  { href: '/td', label: 'Feuilles TD', icon: NotePencilIcon },
+  { href: '/exams', label: 'Examens', icon: TrophyIcon },
+  { href: '/progression', label: 'Progression', icon: TrendUpIcon },
+  { href: '/personnal-space', label: 'Espace personnel', icon: UserFocusIcon },
   {
-    href: '/settings',
+    href: '/communications',
     label: 'Communications et documents',
     icon: BroadcastIcon,
   },
-  { href: '/settings', label: 'Mon profil', icon: UserGearIcon },
+  { href: '/profile', label: 'Mon profil', icon: UserGearIcon },
 ];
 
 export default function Sidebar() {
@@ -104,7 +103,7 @@ export default function Sidebar() {
         <nav className={styles.sidebar}>
           <ul className={styles.menu}>
             {navLinks.map(({ href, label, icon: Icon }) => (
-              <li key={href} className={styles.link}>
+              <li key={label} className={styles.link}>
                 <Icon
                   size={20}
                   color={pathname === href ? 'var(--blue-color)' : 'darkblue'}
