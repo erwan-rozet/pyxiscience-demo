@@ -38,7 +38,7 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 > - The project was built without access to the original source code.
 > - Design choices are based on publicly available elements
 >   (screenshots from [Pyxiscience’s website](https://pyxiscience.com/)).
-> - Goal: demonstrate my technical skills and adaptability to a new stack.
+> - Goal: demonstrate some technical skills and adaptability to a new stack.
 
 ## Prerequisites
 

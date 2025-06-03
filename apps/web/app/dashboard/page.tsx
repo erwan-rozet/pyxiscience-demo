@@ -34,11 +34,13 @@ export default function Profile() {
 
       <div id="modulesWrapper" className={styles.modulesWrapper}>
         <h3 className={styles.title}>Mes modules</h3>
-        <div id="searchBarWrapper" className={styles.searchBarWrapper}>
-          <SearchBar />
-        </div>
-        <div id="plusIconWrapper" className={styles.plusIconWrapper}>
-          <AddModule />
+        <div className={styles.actionsWrapper}>
+          <div id="searchBarWrapper" className={styles.searchBarWrapper}>
+            <SearchBar />
+          </div>
+          <div id="plusIconWrapper" className={styles.plusIconWrapper}>
+            <AddModule />
+          </div>
         </div>
       </div>
       <div id="cards" className={styles.cards}>
