@@ -2,7 +2,8 @@
 
 This project is a partial reproduction of the Pyxiscience platform interface, with some graphical and functional liberties. It was developed as a personal project to familiarize myself with their tech stack and UX approach.
 
-> [!WARNING] > **_Due to the very short development timeframe, only a few very bascis features are implemented, and the GraphQL API is just a learning POC._**
+> [!WARNING]
+> **_Due to the very short development timeframe, only a few very bascis features are implemented, > and the GraphQL API is just a learning POC._**
 
 ## Goals
 
@@ -37,10 +38,6 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 >   (screenshots from [Pyxiscience’s website](https://pyxiscience.com/)).
 > - Goal: demonstrate my technical skills and adaptability to a new stack.
 
-- The project was built without access to the original source code.
-- Design choices are based on publicly available elements (screenshots from [Pyxiscience’s website](https://pyxiscience.com/)).
-- Goal: demonstrate my technical skills and adaptability to a new stack.
-
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (LTS recommanded)
@@ -48,7 +45,7 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 
 ## Installation
 
-_At the root of the repo:_
+_At the root of the repo :_
 
 Install dependencies with `pnpm i`:
 
