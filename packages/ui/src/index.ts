@@ -1,6 +1,3 @@
-export { Button } from './button';
-export { Card } from './card';
-export { Code } from './code';
 export { Layout } from './Layout/layout';
 export { AddModule } from './AddModule/addModule';
 export { SearchBar } from './SearchBar/searchBar';

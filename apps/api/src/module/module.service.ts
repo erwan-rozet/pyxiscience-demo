@@ -6,6 +6,8 @@ import { mockModules } from './data';
 
 const prisma = new PrismaClient();
 
+// Commented for test purposes with mocked data
+
 // @Injectable()
 // export class ModuleService {
 //   create(createModuleInput: CreateModuleInput) {

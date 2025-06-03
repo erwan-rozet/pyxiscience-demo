@@ -14,12 +14,17 @@ type ModuleData = {
 export default function Profile() {
   const { data, loading, error } = useQuery(GET_MODULES);
 
-  console.log('🔍 data:', data);
-
-  console.log('🔍 data.modules:', data.modules);
-
   if (loading) return <p>Chargement des modules...</p>;
-  if (error) return <p>Erreur : {error.message}</p>;
+  if (error)
+    return (
+      <>
+        <p>Oups, erreur : {error.message} </p>
+        <p>
+          {' '}
+          Veuillez recharger la page ou vérifier que le serveur api est lancé
+        </p>
+      </>
+    );
 
   return (
     <>
@@ -29,11 +34,13 @@ export default function Profile() {
 
       <div id="modulesWrapper" className={styles.modulesWrapper}>
         <h3 className={styles.title}>Mes modules</h3>
-        <div id="searchBarWrapper" className={styles.searchBarWrapper}>
-          <SearchBar />
-        </div>
-        <div id="plusIconWrapper" className={styles.plusIconWrapper}>
-          <AddModule />
+        <div className={styles.actionsWrapper}>
+          <div id="searchBarWrapper" className={styles.searchBarWrapper}>
+            <SearchBar />
+          </div>
+          <div id="plusIconWrapper" className={styles.plusIconWrapper}>
+            <AddModule />
+          </div>
         </div>
       </div>
       <div id="cards" className={styles.cards}>

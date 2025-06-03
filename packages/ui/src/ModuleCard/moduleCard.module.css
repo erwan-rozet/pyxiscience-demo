@@ -1,4 +1,6 @@
-.card {
+/* commented out to check responsive */
+
+/* .card {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -6,7 +8,18 @@
   border: 1px solid var(--blue-color);
   border-radius: 12px;
   box-shadow: var(--shadow2);
-  overflow: hidden; /* nécessaire pour que le border-radius masque les enfants */
+  overflow: hidden;
+} */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  border: 1px solid var(--blue-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow2);
+  overflow: hidden;
 }
 
 .card:hover {
