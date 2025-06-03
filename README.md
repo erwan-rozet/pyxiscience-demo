@@ -88,3 +88,7 @@ Visit services on your localhost at :
 - [API](http://localhost:3000/graphql)
 
 - [Web](http://localhost:3001/dashboard)
+
+> [!IMPORTANT] 
+> The only real page and link is "Tableau de bord"
+> Other link are only display pages with titles
