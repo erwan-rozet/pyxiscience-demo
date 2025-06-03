@@ -68,7 +68,7 @@ cd apps/api
 pnpm dev
 ```
 
-and
+and in another terminal window
 
 ```bash
 cd apps/web
