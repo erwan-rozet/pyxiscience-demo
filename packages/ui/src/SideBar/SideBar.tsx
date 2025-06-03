@@ -106,7 +106,7 @@ export default function Sidebar() {
               <li key={label} className={styles.link}>
                 <Icon
                   size={20}
-                  color={pathname === href ? 'var(--blue-color)' : 'darkblue'}
+                  color={pathname === href ? 'var(--blue-color)' : 'dimgray'}
                   weight="bold"
                 />
                 <Link
@@ -121,8 +121,8 @@ export default function Sidebar() {
         </nav>
       </div>
       <div className={styles.footer}>
-        <SignOutIcon size={20} color={'darkblue'} wheight={'bold'} />
-        <Link href="/settings">Se déconnecter</Link>
+        <SignOutIcon size={20} color={'var(--blue-color)'} wheight={'bold'} />
+        <Link href="/disconnect">Se déconnecter</Link>
       </div>
     </div>
   );
