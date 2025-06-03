@@ -27,6 +27,10 @@
   gap: 1rem;
 }
 
+.plusIconWrapper {
+  cursor: pointer;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
