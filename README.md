@@ -4,7 +4,7 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 
 > [!WARNING]  
 > **_Due to the very short development timeframe,
-> <ins>only a few very bascis features are implemented</ins>?
+> <ins>only a few very bascis features are implemented</ins>
 > and the GraphQL API is just a learning POC._**
 
 ## Goals
