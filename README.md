@@ -56,7 +56,7 @@ Install dependencies with `pnpm i`:
 pnpm i
 ```
 
-## Set .env file :
+## Set .env file on `apps/api`:
 
 Copy the `.env.example` file to `.env` and fill in the required variables.
 
