@@ -1,7 +1,9 @@
 # Project Inspired by Pyxiscience
 
-This project is a partial reproduction of the Pyxiscience platform interface, with some graphical and functional liberties. It was developed as a personal project to familiarize myself with their tech stack and UX approach.  
-**_Due to the very short development timeframe, only a few features are implemented, and the GraphQL API is just a learning POC._**
+This project is a partial reproduction of the Pyxiscience platform interface, with some graphical and functional liberties. It was developed as a personal project to familiarize myself with their tech stack and UX approach.
+
+> ⚠️ **Warning**  
+> **_Due to the very short development timeframe, only a few very bascis features are implemented, and the GraphQL API is just a learning POC._**
 
 ## Goals
 
@@ -55,6 +57,8 @@ Serve dev `pnpm dev` :
 ```bash
 pnpm dev
 ```
+
+Visit services on your localhost at :
 
 - [API](http://localhost:3000/graphql)
 

@@ -1,3 +1,5 @@
+// Commented for test purposes with mocked data
+
 // import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 // import { ModuleService } from './module.service';
 // import { Module } from './entities/module.entity';
@@ -31,34 +33,6 @@
 //   @Mutation(() => Module)
 //   removeModule(@Args('id', { type: () => Int }) id: number) {
 //     return this.moduleService.remove(id);
-//   }
-// }
-
-// import { Resolver, Query, ObjectType, Field } from '@nestjs/graphql';
-// import { ModuleService } from './module.service';
-
-// @ObjectType()
-// class Module {
-//   @Field()
-//   id: string;
-
-//   @Field()
-//   title: string;
-
-//   @Field()
-//   category: string;
-
-//   @Field()
-//   color: string;
-// }
-
-// @Resolver(() => Module)
-// export class ModuleResolver {
-//   constructor(private service: ModuleService) {}
-
-//   @Query(() => [Module])
-//   modules() {
-//     return this.service.findAll();
 //   }
 // }
 
