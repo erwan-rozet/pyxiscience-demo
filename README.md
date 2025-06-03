@@ -53,15 +53,9 @@ Install dependencies with `pnpm i`:
 pnpm i
 ```
 
-# Serve dev `pnpm dev` :
+## Dev servers` :
 
-_At the root of the repo :_
-
-```bash
-pnpm dev
-```
-
-_Or if you want separated terminals for each app, from the root of the repo, execute :_
+_If you want separated terminals for each app, from the root of the repo, execute :_
 
 ```bash
 cd apps/api
@@ -76,6 +70,12 @@ and
 ```bash
 cd apps/web
 ```
+
+```bash
+pnpm dev
+```
+
+_Or at the root of the repo :_
 
 ```bash
 pnpm dev
