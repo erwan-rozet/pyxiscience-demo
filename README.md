@@ -28,6 +28,7 @@ This project is a partial reproduction of the Pyxiscience platform interface, wi
 - Reusable components for forms, layout, etc.
 - Dynamic routing system (Next.js)
 - Basic GraphQL API
+- Responsive design on all screen sizes
 
 ## Preview
 
@@ -91,4 +92,4 @@ Visit services on your localhost at :
 
 > [!IMPORTANT] 
 > The only real page and link is "Tableau de bord"
-> Other link are only display pages with titles
+> Other links are only displaying empty pages with their titles
