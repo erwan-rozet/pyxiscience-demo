@@ -2,7 +2,9 @@
 
 This project is a partial reproduction of the Pyxiscience platform interface, with some graphical and functional liberties. It was developed as a personal project to familiarize myself with their tech stack and UX approach.
 
-> [!WARNING] > **_Due to the very short development timeframe, only a few very bascis features are implemented, and the GraphQL API is just a learning POC._**
+> [!WARNING]
+> **_Due to the very short development timeframe, only a few very bascis features are implemented,
+> and the GraphQL API is just a learning POC._**
 
 ## Goals
 
