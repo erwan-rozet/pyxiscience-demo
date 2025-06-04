@@ -95,5 +95,5 @@ Visit services on your localhost at :
 - [Web](http://localhost:3001/dashboard)
 
 > [!IMPORTANT]
-> The only real page and link is "Tableau de bord"
+> While waiting for more developpments to be done, the only real page and link is "Tableau de bord"
 > Other links are only displaying empty pages with their titles
