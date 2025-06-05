@@ -8,6 +8,7 @@ import { ModuleModule } from './module/module.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { PrismaService } from 'prisma/prisma.service';
 
 @Module({
   imports: [

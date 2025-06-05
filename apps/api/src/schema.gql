@@ -12,3 +12,13 @@ type ModuleType {
 type Query {
   modules: [ModuleType!]!
 }
+
+type Mutation {
+  createModule(input: CreateModuleInput!): ModuleType!
+}
+
+input CreateModuleInput {
+  title: String!
+  category: String!
+  color: String!
+}

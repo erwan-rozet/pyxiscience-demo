@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { CreateModuleInput } from './dto/create-module.input';
+
 import { UpdateModuleInput } from './dto/update-module.input';
 import { PrismaClient } from '@prisma/client';
 import { mockModules } from './data';
+import { CreateModuleInput, ModuleType } from './module.type';
+import { PrismaService } from 'prisma/prisma.service';
 
 const prisma = new PrismaClient();
 
@@ -37,9 +39,36 @@ const prisma = new PrismaClient();
 //     return prisma.module.findMany();
 //   }
 // }
+
+// MOCKED DATA
+// @Injectable()
+// export class ModuleService {
+//   private modules: ModuleType[] = [];
+
+//   findAll() {
+//     return mockModules;
+//   }
+
+//   create(input: CreateModuleInput): CreateModuleInput {
+//     const newModule = {
+//       ...input,
+//       id: Date.now().toString(),
+//     };
+//     this.modules.push(newModule);
+//     return newModule;
+//   }
+// }
 @Injectable()
 export class ModuleService {
-  findAll() {
-    return mockModules;
+  constructor(private readonly prisma: PrismaService) {}
+
+  create(input: CreateModuleInput): Promise<CreateModuleInput> {
+    return this.prisma.module.create({
+      data: input,
+    });
+  }
+
+  findAll(): Promise<CreateModuleInput[]> {
+    return this.prisma.module.findMany();
   }
 }
