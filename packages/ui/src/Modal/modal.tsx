@@ -27,19 +27,20 @@ export function Modal({
     <ReactModal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      className={styles.modalContent}
+      className={`${styles.modalContent} ${isOpen ? styles.modalContentOpen : ''}`}
       overlayClassName={styles.modalOverlay}
       shouldCloseOnOverlayClick={true}
-      closeTimeoutMS={150}
+      closeTimeoutMS={300}
     >
-      {title && <h2>{title}</h2>}
-      <div id="buttonWrapper" className={styles.buttonWrapper}>
-        {' '}
-        <button id="button" className={styles.button} onClick={onClose}>
-          ✕
-        </button>
+      <div id="titleWrapper" className={styles.titleWrapper}>
+        {title && <h2>{title}</h2>}
+        <div id="buttonWrapper" className={styles.buttonWrapper}>
+          {' '}
+          <button id="button" className={styles.button} onClick={onClose}>
+            ✕
+          </button>
+        </div>
       </div>
-
       <div>{children}</div>
     </ReactModal>
   );
