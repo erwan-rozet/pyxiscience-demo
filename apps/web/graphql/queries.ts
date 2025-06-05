@@ -10,3 +10,14 @@ export const GET_MODULES = gql`
     }
   }
 `;
+
+export const CREATE_MODULE = gql`
+  mutation CreateModule($input: CreateModuleInput!) {
+    createModule(input: $input) {
+      id
+      title
+      category
+      color
+    }
+  }
+`;

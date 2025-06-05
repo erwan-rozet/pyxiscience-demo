@@ -36,9 +36,9 @@
 //   }
 // }
 
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { ModuleService } from './module.service';
-import { ModuleType } from './module.type';
+import { CreateModuleInput, ModuleType } from './module.type';
 
 @Resolver(() => ModuleType)
 export class ModuleResolver {
@@ -47,5 +47,10 @@ export class ModuleResolver {
   @Query(() => [ModuleType])
   modules() {
     return this.moduleService.findAll();
+  }
+
+  @Mutation(() => ModuleType)
+  createModule(@Args('input') input: CreateModuleInput) {
+    return this.moduleService.create(input);
   }
 }

@@ -2,8 +2,8 @@
 
 import styles from './page.module.css';
 import { AddModule, Modal, ModuleCard, SearchBar } from '@repo/ui';
-import { useQuery } from '@apollo/client';
-import { GET_MODULES } from '../../graphql/queries';
+import { useMutation, useQuery } from '@apollo/client';
+import { CREATE_MODULE, GET_MODULES } from '../../graphql/queries';
 import { useState } from 'react';
 
 type ModuleData = {
@@ -14,8 +14,22 @@ type ModuleData = {
 
 export default function Profile() {
   const { data, loading, error } = useQuery(GET_MODULES);
-
+  const [createModule] = useMutation(CREATE_MODULE);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleAddModule = async () => {
+    await createModule({
+      variables: {
+        input: {
+          title: 'Frontend validation',
+          category: 'Exemple',
+          color: '#4CAF50',
+        },
+      },
+    });
+
+    setIsOpen(true);
+  };
 
   if (loading) return <p>Chargement des modules...</p>;
   if (error)
@@ -44,7 +58,8 @@ export default function Profile() {
           <div
             id="plusIconWrapper"
             className={styles.plusIconWrapper}
-            onClick={() => setIsOpen(true)}
+            onClick={handleAddModule}
+            // onClick={() => setIsOpen(true)}
           >
             <AddModule />
           </div>
