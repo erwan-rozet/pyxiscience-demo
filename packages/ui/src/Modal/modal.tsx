@@ -29,12 +29,17 @@ export function Modal({
       onRequestClose={onRequestClose}
       className={styles.modalContent}
       overlayClassName={styles.modalOverlay}
+      shouldCloseOnOverlayClick={true}
       closeTimeoutMS={150}
     >
       {title && <h2>{title}</h2>}
-      <button onClick={onClose} style={{ float: 'right' }}>
-        ✕
-      </button>
+      <div id="buttonWrapper" className={styles.buttonWrapper}>
+        {' '}
+        <button id="button" className={styles.button} onClick={onClose}>
+          ✕
+        </button>
+      </div>
+
       <div>{children}</div>
     </ReactModal>
   );
